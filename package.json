@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gorniczy/app-config/issues"
   },
-  "homepage": "https://github.com/gorniczy/app-config#readme"
+  "homepage": "https://github.com/gorniczy/app-config#readme",
+  "devDependencies": {
+    "webpack": "4.29.6"
+  }
 }
