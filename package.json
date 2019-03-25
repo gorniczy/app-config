@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
+  "browserslist": "> 0.25%, not dead",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gorniczy/app-config.git"
@@ -17,6 +19,9 @@
   },
   "homepage": "https://github.com/gorniczy/app-config#readme",
   "devDependencies": {
+    "@babel/core": "7.4.0",
+    "@babel/preset-env": "7.4.2",
+    "babel-loader": "8.0.5",
     "css": "2.2.4",
     "html-webpack-plugin": "3.2.0",
     "loader": "2.1.1",
