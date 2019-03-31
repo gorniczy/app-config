@@ -1,17 +1,19 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'App Config'
-    })
-  ],
+  mode: "development",
+  devtool: 'eval',
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist')
+  },
   module: {
     rules: [{
         test: /\.m?js$/,
@@ -24,15 +26,41 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
-        use: [{
-            loader: "style-loader"
+        test: /\.s(a|c)ss$/,
+        use: [
+          isProduction ? MiniCssExtractPlugin.loader : {
+            loader: 'style-loader',
+            options: {
+              sourceMap: true
+            }
           },
           {
-            loader: "css-loader"
+            loader: 'css-loader',
+            options: {
+              sourceMap: isProduction
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: isProduction
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: isProduction
+            }
           }
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'App Config'
+    }),
+    new MiniCssExtractPlugin(),
+    'postcss-preset-env': {},
+  ],
 }
