@@ -1,3 +1,2 @@
-import Script from './script'
-
-Script()
+// import Script from "./script";
+import "./main.scss";
