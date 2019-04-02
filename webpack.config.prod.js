@@ -34,7 +34,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "App Config"
+      title: "My title",
+      template: "./src/index.html"
     }),
     new MiniCssExtractPlugin()
   ]
