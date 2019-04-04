@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rm -r -f dist",
-    "build": "webpack --config webpack.config.prod.js",
+    "build": "webpack --config webpack.config.js",
     "start": "webpack-dev-server --open",
     "eslint": "node_modules/.bin/eslint src --fix"
   },
