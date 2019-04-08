@@ -33,6 +33,12 @@ module.exports = {
           { loader: "postcss-loader", options: { sourceMap: false } },
           { loader: "sass-loader", options: { sourceMap: false } }
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },
