@@ -1,4 +1,4 @@
 import { insertImages } from './script'
-import './main.scss'
+import './stylesheets/main.scss'
 
 insertImages()
