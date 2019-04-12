@@ -16,10 +16,13 @@
   "layout/html",
   "layout/body",
   "layout/header",
-  "layout/container";
+  "layout/container",
+  "layout/footer";
 
 // 5. components
 
 @import
   "components/navbar",
-  "components/cards";
+  "components/cards",
+  "components/card",
+  "components/social";
