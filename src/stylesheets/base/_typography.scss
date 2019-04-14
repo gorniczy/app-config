@@ -1,0 +1,26 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: $color-primary;
+}
+
+.logo {
+  font-family: 'Merienda', cursive;
+  font-size: 18px;
+}
+
+.navbar__item {
+  color: $color-secondary;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.footer {
+  color: $color-secondary;
+
+  span {
+    color: $color-primary;
+  }
+}

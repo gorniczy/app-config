@@ -5,10 +5,15 @@
 
 // 2. abstracts
 
+@import
+  "abstracts/variables";
+
 // 3. base
 
 @import
-  "base/dev-outline";
+  "base/dev-outline",
+  "base/fonts",
+  "base/typography";
 
 // 4. layout
 
