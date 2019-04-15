@@ -1,4 +1,6 @@
 .card {
+  position: relative;
+
   &:hover {
     border: 5px solid #FADDB2;
     cursor: pointer;
@@ -7,4 +9,12 @@
 
 .card__img {
   width: 100%;
+}
+
+.card__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
