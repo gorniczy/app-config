@@ -1,4 +1,5 @@
-import { insertImages } from './script'
+import { insertImages, insertIcons } from './script'
 import './stylesheets/main.scss'
 
-insertImages()
+insertImages();
+insertIcons();
