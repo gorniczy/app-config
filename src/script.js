@@ -5,15 +5,37 @@ import Negroni from './img/negroni.jpg'
 import Rattlesnake from './img/rattlesnake.jpg'
 import Zinger from './img/zinger.jpg'
 
+import Dribble from './img/dribble.svg'
+import Instagram from './img/instagram.svg'
+import Facebook from './img/facebook.svg'
+
+// insert cards content
+
 const images = [Bijou, Negroni, Mojito, Rattlesnake, Eggnogg, Zinger];
 const names = ["Bijou", "Negroni", "Mojito", "Texas Rattlesnake", "Egg Nogg", "Zinger"];
-const node = document.querySelectorAll('.card');
+const cardNode = document.querySelectorAll('.card');
 
 export const insertImages = () => {
-  for (let i = 0; i < node.length; i++) {
-    node[i].innerHTML = `
+  for (let i = 0; i < cardNode.length; i++) {
+    cardNode[i].innerHTML = `
     <img class="card__img" src="${images[i]}" alt="drink">
     <p class="card__name">${names[i]}</p>
     `;
+  }
+}
+
+// insert social media icons
+
+const icons = [Dribble, Instagram, Facebook];
+const iconNames = ["dribble", "instagram", "facebook"];
+const footerNode = document.querySelector('.footer__social');
+
+export const insertIcons = () => {
+  for (let i = 0; i < icons.length; i++) {
+    const iconElement = document.createElement("img");
+    iconElement.className = "footer__icon";
+    iconElement.src = icons[i];
+    iconElement.alt = iconNames[i];
+    footerNode.appendChild(iconElement);
   }
 }
