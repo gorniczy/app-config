@@ -1,3 +1,5 @@
+import Hamburger from './img/hamburger.svg'
+
 import Bijou from './img/bijou.jpg'
 import Eggnogg from './img/eggnogg.jpg'
 import Mojito from './img/mojito.jpg'
@@ -8,6 +10,18 @@ import Zinger from './img/zinger.jpg'
 import Dribble from './img/dribble.svg'
 import Instagram from './img/instagram.svg'
 import Facebook from './img/facebook.svg'
+
+// insert 'hamburger' icon
+
+const navbarNode = document.querySelector("nav");
+
+export const insertHamburger = () => {
+  const hamburger = document.createElement("img");
+  hamburger.className = "navbar__hamburger";
+  hamburger.src = Hamburger;
+  hamburger.alt = 'menu icon';
+  navbarNode.appendChild(hamburger);
+}
 
 // insert cards content
 
