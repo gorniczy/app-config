@@ -23,6 +23,23 @@ export const insertHamburger = () => {
   navbarNode.appendChild(hamburger);
 }
 
+// activate 'hamburger' icon
+
+const navbarList = document.querySelector(".navbar");
+
+const toggleMenu = () => {
+  if(navbarList.className === 'navbar navbar--desktop') {
+    navbarList.className += ' navbar--mobile';
+  } else {
+    navbarList.className = 'navbar navbar--desktop';
+  }
+}
+
+export const listenForClick = () => {
+  const hamburger = document.querySelector(".navbar__hamburger");
+  hamburger.addEventListener('click', toggleMenu);
+}
+
 // insert cards content
 
 const images = [Bijou, Negroni, Mojito, Rattlesnake, Eggnogg, Zinger];

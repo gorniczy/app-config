@@ -6,7 +6,11 @@ nav {
   height: 30%;
 }
 
-.navbar {
+.navbar--mobile {
+  display: none;
+}
+
+.navbar--desktop {
   display: flex;
   justify-content: space-between;
   width: 80%;
@@ -24,17 +28,22 @@ nav {
 .navbar__hamburger {
   display: none;
 }
+
 @media screen and (max-width: 900px) {
   nav {
     position: relative;
-    z-index: 100;
     background-color: #EEF8F6;
     height: auto;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    z-index: 100;
   }
 
-  .navbar {
-    // display: none;
+  .navbar--desktop {
+    display: none;
+  }
+
+  .navbar--mobile {
+    display: flex;
     flex-direction: column;
     width: 60%;
     text-align: center;
@@ -55,8 +64,9 @@ nav {
     display: inherit;
     position: absolute;
     top: 0;
-    right: 50px;
+    right: 5%;
     align-self: flex-start;
     width: 30px;
+    cursor: pointer;
   }
 }
